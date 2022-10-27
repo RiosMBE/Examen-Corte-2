@@ -1,0 +1,3 @@
+function Calcular(){
+    let pesoMexicano
+}
