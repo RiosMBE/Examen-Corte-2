@@ -12,26 +12,77 @@
 </head>
 
 <body>
-    <div id="Encabezado">
+    <div class="Encabezado">
         <header>
             <h1>Examen Corte 2</h1>
         </header>
     </div>
 
-    <div id="Contenido">
-        <label for="">Cantidad</label>
-        <button id="btnCalcular" onclick="Calcular()">Calcular</button>
-        <button id="btnBorrar" onclick="Borrar()">Borrar</button>
-        <br>
+    <div class="Contenido">
+        <div class="Seccion1">
+            <label for="">Cantidad</label>
+            <input type="text" name="Cantidad" id="Cantidad" placeholder="change()">
+            <label for="">Moneda Origen</label>
+            <select name="monedaOrigen" id="monedaOrigen">
+                <option value="">Moneda Origen</option>
+                <option value="MX">Peso Mexicano</option>
+                <option value="DA">Peso Americano</option>
+                <option value="DC">Peso Canaciense</option>
+                <option value="EU">Euro</option>
+            </select>
+
+            <label for="">Moneda Destino</label>
+            <select name="monedaDestino" id="monedaDestino">
+                <option value="">Moneda Destino</option>
+                <option value="MX">Peso Mexicano</option>
+                <option value="DA">Dolar Americano</option>
+                <option value="DC">Dolar Canadiense</option>
+                <option value="EU">Euro</option>
+            </select>
+
+            <label for="">Subtotal</label>
+            <input type="text" name="Subtotal" id="Subtotal" readonly placeholder="Subtotal">
+
+            <label for="">Total comision</label>
+            <input type="text" name="totalComision" id="totalComision" readonly placeholder="totalComision">
+
+            <label for="">Total a pagar</label>
+            <input type="text" name="totalPagar" id="totalPagar" readonly placeholder="totalPagar">
+        </div>
+
+        <div>
+            <button id="btnCalcular" onclick="Calcular()">Calcular</button>
+            <button id="btnBorrar" onclick="Borrar()">Borrar</button>
+        </div>
+
+        <div class="Seccion2">
+            <h2 style="text-align: center;">Registros realizados</h2>
+            <br>
+        <div class="Seccion2-2">
+            <label for="" name="lblCantidad" id="lblCantidad"></label>
+            <label for="" name="lblMonedaOrigen" id="lblMonedaOrigen"></label>
+            <label for="" name="lblMonedaDestino" id="lblMonedaDestino"></label>
+            <label for="" name="lblSubtotal" id="lblSubtotal"></label>
+            <label for="" name="lblTotalComision" id="lblTotalComision"></label>
+            <label for="" name="lblTotalPagar" id="lblTotalPagar"></label>
+        </div>
+        </div>
         <hr>
-        <button id="btnBorrarRegistro" onclick="BorrarRegistro()">Borrar Registro</button>
+
+        <div class="Seccion3">
+            <button onclick="borrarRegistro()">Borrar Registros</button>
+            <label for="">Total General</label>
+            <label for="" name="registroSubtotal" id="registroSubtotal">$</label>
+            <label for=""name="registroTotalComision" id="registroTotalComision">$</label>
+            <label for="" name="registroTotalPagar" id="registroTotalPagar">$</label>
+        </div>
     </div>
 
-    <div id="Pie">
+    <div class="Pie">
         <footer>
-            <h2>Brian Eduardo Rios Muñoz @ </h2>
+            <h2>Brian Eduardo Rios Muñoz @ Examen Corte 2</h2>
         </footer>
     </div>
 
-</body>
+</div>
 </html>
