@@ -12,75 +12,75 @@
 </head>
 
 <body>
-    <div class="Encabezado">
+    <div class="encabezado">
         <header>
-            <h1>Examen Corte 2</h1>
+            <h1>Cash-Dolar</h1>
         </header>
     </div>
 
-    <div class="Contenido">
-        <div class="Seccion1">
-            <label for="">Cantidad</label>
-            <input type="text" name="Cantidad" id="Cantidad" placeholder="change()">
-            <label for="">Moneda Origen</label>
-            <select name="monedaOrigen" id="monedaOrigen">
+    <div class="contenido">
+        <div class="seccion1">
+            <label for="">Cantidad: </label>
+            <input type="text" name="cantidad" id="cantidad" placeholder="Cantidad">
+
+            <label for="">Moneda origen: </label>
+            <select name="monedaOrigen" id="monedaOrigen" onchange="change()">
                 <option value="">Moneda Origen</option>
-                <option value="MX">Peso Mexicano</option>
-                <option value="DA">Peso Americano</option>
-                <option value="DC">Peso Canaciense</option>
-                <option value="EU">Euro</option>
+                <option value="mxn">Peso Mexicano</option>
+                <option value="da">Dólar Americano</option>
+                <option value="dc">Dólar Canadiense</option>
+                <option value="eur">Euro</option>
             </select>
 
-            <label for="">Moneda Destino</label>
+            <label for="">Moneda destino: </label>
             <select name="monedaDestino" id="monedaDestino">
                 <option value="">Moneda Destino</option>
-                <option value="MX">Peso Mexicano</option>
-                <option value="DA">Dolar Americano</option>
-                <option value="DC">Dolar Canadiense</option>
-                <option value="EU">Euro</option>
+                <option value="mxn">Peso Mexicano</option>
+                <option value="da">Dolár Americano</option>
+                <option value="dc">Dólar Canadiense</option>
+                <option value="eur">Euro</option>
             </select>
 
             <label for="">Subtotal</label>
-            <input type="text" name="Subtotal" id="Subtotal" readonly placeholder="Subtotal">
+            <input type="text" name="subtotal" id="subtotal" readonly placeholder="Subtotal">
 
-            <label for="">Total comision</label>
-            <input type="text" name="totalComision" id="totalComision" readonly placeholder="totalComision">
+            <label for="">Total de comisión: </label>
+            <input type="text" name="totalComision" id="totalComision" readonly placeholder="Total comisión">
 
             <label for="">Total a pagar</label>
-            <input type="text" name="totalPagar" id="totalPagar" readonly placeholder="totalPagar">
+            <input type="text" name="totalPagar" id="totalPagar" readonly placeholder="Total a pagar">
+            <div>
+                <button onclick="calcular()">
+                    Calcular
+                </button>
+                <button onclick="registro()">Registro</button>
+            </div>
         </div>
-
-        <div>
-            <button id="btnCalcular" onclick="Calcular()">Calcular</button>
-            <button id="btnBorrar" onclick="Borrar()">Borrar</button>
-        </div>
-
-        <div class="Seccion2">
+        <div class="seccion2">
             <h2 style="text-align: center;">Registros realizados</h2>
             <br>
-        <div class="Seccion2-2">
-            <label for="" name="lblCantidad" id="lblCantidad"></label>
-            <label for="" name="lblMonedaOrigen" id="lblMonedaOrigen"></label>
-            <label for="" name="lblMonedaDestino" id="lblMonedaDestino"></label>
-            <label for="" name="lblSubtotal" id="lblSubtotal"></label>
-            <label for="" name="lblTotalComision" id="lblTotalComision"></label>
-            <label for="" name="lblTotalPagar" id="lblTotalPagar"></label>
-        </div>
+            <div class="seccion2-2">
+                <label for="" id="lblCantidad" name="lblCantidad"></label>
+                <label for="" id="lblMonedaOrigen" name="lblMonedaOrigen"></label>
+                <label for="" id="lblMonedaDestino" name="lblMonedaDestino"></label>
+                <label for="" id="lblSubtotal" name="lblSubtotal"></label>
+                <label for="" id="lblTotalComision" name="lblTotalComision"></label>
+                <label for="" id="lblTotalPagar" name="lblTotalPagar"></label>
+            </div>
         </div>
         <hr>
-
-        <div class="Seccion3">
-            <button onclick="borrarRegistro()">Borrar Registros</button>
-            <label for="">Total General</label>
-            <label for="" name="registroSubtotal" id="registroSubtotal">$</label>
-            <label for=""name="registroTotalComision" id="registroTotalComision">$</label>
-            <label for="" name="registroTotalPagar" id="registroTotalPagar">$</label>
+        <div class="seccion3">
+            <button onclick="borrarRegistros()">Borrar registros</button>
+            <label for="">TOTAL GENERAL</label>
+            <label for="" id="registroSubtotal" name="registroSubtotal">$</label>
+            <label for="" id="registroTotalComision" name="registroTotalComision">$</label>
+            <label for="" id="registroTotalPagar" name="registroTotalPagar">$</label>
         </div>
     </div>
 
-    <div class="Pie">
+    <div class="pie">
         <footer>
-            <h2>Brian Eduardo Rios Muñoz @ Examen Corte 2</h2>
+            <h1>Brian Eduardo Rios Muñoz @ Examen Corte 2</h1>
         </footer>
     </div>
 
